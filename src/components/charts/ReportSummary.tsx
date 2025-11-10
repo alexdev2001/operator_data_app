@@ -28,7 +28,7 @@ export default function ReportSummary({ fileUploaded, allSheets, fileName }: Rep
                 (s) => `sheets=${encodeURIComponent(s)}`
             ).join("&");
 
-            const url = `http://localhost:8000/report/full?file_name=${encodeURIComponent(
+            const url = `https://data-analysis-api-znaa.onrender.com/report/full?file_name=${encodeURIComponent(
                 fileName
             )}&${sheetParams}`;
 

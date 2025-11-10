@@ -73,7 +73,7 @@ function App() {
     return (
         <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100">
             {/* Header */}
-            <header className="bg-white dark:bg-gray-800 rounded-2xl shadow p-4 flex justify-between items-center">
+            <header className="bg-white dark:bg-gray-800 rounded-2xl shadow p-4 flex justify-between items-center border border-gray-600">
                 <h1 className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
                     📊 Data Insights Dashboard
                 </h1>
@@ -98,7 +98,7 @@ function App() {
             {/* Content */}
             <main className="p-6 grid grid-cols-1 md:grid-cols-4 gap-6">
                 {/* Sidebar */}
-                <aside className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow md:col-span-1">
+                <aside className="bg-white border dark:bg-gray-800 p-4 border-gray-600 rounded-2xl shadow md:col-span-1">
                     <FileUpload
                         onFileSelect={(uploadedFile) => {
                             setFile(uploadedFile);
@@ -145,14 +145,14 @@ function App() {
                 </aside>
 
                 {/* Main Display */}
-                <section className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow md:col-span-3 flex flex-col items-center">
+                <section className="bg-white dark:bg-gray-800 border border-gray-600 p-6 rounded-2xl shadow md:col-span-3 flex flex-col items-center">
                     {renderGraph()}
                 </section>
             </main>
 
             {/* Footer */}
             <footer className="text-center py-4 text-gray-500 dark:text-gray-400 text-sm">
-                © {new Date().getFullYear()} Data Insights Dashboard
+                © {new Date().getFullYear()} Operator data insights dashboard (By Alex Imani)
             </footer>
         </div>
     );

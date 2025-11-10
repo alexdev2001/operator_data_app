@@ -19,14 +19,14 @@ const GGRTrendChart: React.FC<GGRTrendChartProps> = ({ fileUploaded, selectedShe
             setError(null);
             try {
                 const response = await fetch(
-                    `https://data-analysis-api-eii1.onrender.com/analysis/timeseries?sheet_name=${encodeURIComponent(selectedSheet)}`
+                    `https://data-analysis-api-8l1t.onrender.com/analysis/timeseries?sheet_name=${encodeURIComponent(selectedSheet)}`
                 );
                 if (!response.ok) {
                     throw new Error(`Server error: ${response.status}`);
                 }
 
                 const data = await response.json();
-                setImageUrl(`https://data-analysis-api-eii1.onrender.com/plots/${data.plot_path.split('/').pop()}`);
+                setImageUrl(`https://data-analysis-api-8l1t.onrender.com/plots/${data.plot_path.split('/').pop()}`);
             } catch (err: any) {
                 setError(err.message);
             } finally {

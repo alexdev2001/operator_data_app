@@ -28,7 +28,7 @@ export default function ReportSummary({ fileUploaded, allSheets, fileName }: Rep
                 (s) => `sheets=${encodeURIComponent(s)}`
             ).join("&");
 
-            const url = `https://data-analysis-api-eii1.onrender.com/report/full?file_name=${encodeURIComponent(
+            const url = `https://data-analysis-api-8l1t.onrender.com/report/full?file_name=${encodeURIComponent(
                 fileName
             )}&${sheetParams}`;
 

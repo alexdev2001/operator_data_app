@@ -23,7 +23,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFileSelect }) => {
         formData.append("file", file);
 
         try {
-            const response = await fetch("https://data-analysis-api-eii1.onrender.com/upload/dataset", {
+            const response = await fetch("https://data-analysis-api-8l1t.onrender.com/upload/dataset", {
                 method: "POST",
                 body: formData,
             });

@@ -28,7 +28,7 @@ function App() {
         const fetchSheets = async () => {
             if (!fileUploaded) return;
             try {
-                const res = await fetch("https://data-analysis-api-eii1.onrender.com/upload/sheets");
+                const res = await fetch("https://data-analysis-api-8l1t.onrender.com/upload/sheets");
                 const data = await res.json();
                 setSheets(data.sheets);
                 if (data.sheets.length > 0) setSelectedSheet(data.sheets[0]);
